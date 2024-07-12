@@ -1,0 +1,23 @@
+<div class="container-fluid">
+    <div class="contenedor_principal_login">
+        <div class="contenedor_sombra">
+            <div class="contenedor_formulario">
+                <form [formGroup]="infoLogin" (submit)="ingresarLogin()">
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Correo Electronico</label>
+                        <input type="text" class="form-control" id="exampleInputPassword1" formControlName="email">
+                        <small class="text-danger" *ngIf="validarEmail">*Escriba el correo electronico</small>
+
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword3" class="form-label">Password</label>
+                        <input type="password" class="form-control" formControlName="contrasena">
+                        <small class="text-danger" *ngIf="ValidarPass">*Escriba su contraseña</small>
+                    </div>
+                  
+                    <button type="submit" class="btn btn-primary boton_registro">Ingresar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

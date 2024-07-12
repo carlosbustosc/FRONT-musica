@@ -1,0 +1,18 @@
+.menu_header{
+    background-color: #010522cc !important;
+    padding: 22px 10px;
+}
+
+.nav-link{
+
+    color:#fff;
+}
+
+.icono_menu{
+    width: 99px;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 10px;
+}

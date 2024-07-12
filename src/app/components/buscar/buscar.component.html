@@ -1,0 +1,78 @@
+<div class="contenedor_principal_buscar">
+    <div class="container">
+        <div class="row bajar_buscador">
+            <form>
+                <label class="letra_artista">Buscar Artista Favorito</label>
+                <input type="text" class="form-control" #valor (keyup)="buscar( valor.value )"/>
+            </form>
+        </div>
+
+        <!--
+        <div class="row" *ngIf="ocultarSlider">
+            <div class="col-md-6">
+                <div id="carouselExampleIndicators" class="carousel slide ancho_carrusel">
+                    <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6" aria-label="Slide 7"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="7" aria-label="Slide 8"></button>
+
+                    
+                    </div>
+                    <div class="carousel-inner">
+
+                    <div class="carousel-item active">
+                        <img [src]="albunSlider[0].images[0].url" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img [src]="albunSlider[1].images[0].url" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img [src]="albunSlider[2].images[0].url" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img [src]="albunSlider[3].images[0].url" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img [src]="albunSlider[4].images[0].url" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img [src]="albunSlider[5].images[0].url" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img [src]="albunSlider[6].images[0].url" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img [src]="albunSlider[7].images[0].url" class="d-block w-100" alt="...">
+                    </div>
+
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        -->
+        <div class="row bajar_resultados" *ngIf="ocultarAlbunes">
+            <div class="card col-md-3" *ngFor="let resultado of resultadoBusqueda" (click)="idGrupo( resultado.id )">
+                <img [src]="resultado.images | noimage" class="card-img-top alto_imagen" alt="...">
+                <div class="card-body">
+                <h2 class="card-title">{{ resultado.name }}</h2>
+                <p class="card-text texto_generos fondo_verde">{{ resultado.genres[0] }}</p>
+
+                <p class="card-text texto_generos">{{ "Popularidad:" + resultado.popularity }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

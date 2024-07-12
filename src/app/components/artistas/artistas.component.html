@@ -1,0 +1,58 @@
+<div class="contenedor_principal_artista">
+    <div class="container-fluid principal">
+        <div class="container contenedor_artista">
+
+            <div class="row">
+                <div class="col-md-6">
+                    <button class="btn btn-primary boton_volver" (click)="volver()">Volver</button>
+                    <img [src]="artista.images[0].url" class="imagen_perfil"/>
+                </div>
+                <div class="col-md-6">
+                    <h1 class="artista_name">{{ artista.name }}</h1>
+                    <h3 class="seguidores">{{ "Seguidores: " + artista.followers.total }}</h3>
+                    <p class="generos badge rounded-pill text-bg-primary" *ngFor="let generos of artista.genres">{{ generos }}</p>
+                </div>
+            </div>
+            <!--canciones.album.images[0].url | noimage-->
+        </div>
+    </div>
+
+
+    <div class="container-fluid fondo_track">
+        <div class="container-fluid contenedor_tracks" >
+            <div class="row">
+                <div class="card bg-dark text-white col-md-3 tarjeta_artista" *ngFor="let canciones of todasLasCanciones">
+                    <img class="card-img" [src]="canciones.album.images[0].url" alt="Card image">
+
+                    <div class="card-img-overlay">
+                    
+                        <div class="base_texto">
+                            <p class="card-text">{{ canciones.album.name }}</p>
+                            <p class="card-text2">{{ canciones.name }}</p>
+                            <iframe width="100%" height="152" title="Spotify Embed: My Path to Spotify: Women in Engineering " style="border-radius: 12px" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" [src]="canciones.uri | domseguro : 'https://open.spotify.com/embed?uri=' "></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container_fluid cortar_contenedor">
+        <div class="container_fluid ancho_total">
+            <div class="contenedor_infinito">
+                <div class="row">
+                    <h1 class="artista_name mas_albunes">Más Albunes</h1>
+                    <hr class="divisor">
+                    <div class="card col-md-2" *ngFor="let albunes of  masAlbunes" (click)="getID( albunes.artists[0].id )">
+                        <img [src]="albunes.images | noimage" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text texto_generos fondo_verde">{{ albunes.artists[0].name }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

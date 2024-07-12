@@ -1,0 +1,18 @@
+<div class="fondo">
+    <div class="container contenedor_albunes">
+        <div class="row">
+            <div class="card col-md-4" *ngFor="let albunes of todosLosAlbunes" (click)="parametroID( albunes.artists[0].id )">
+                <img [src]="albunes.images | noimage" class="card-img-top" alt="...">
+                <div class="card-body">
+                <h2 class="card-title">{{ albunes.name }}</h2>
+                <p class="card-text texto_generos fondo_verde">{{ albunes.artists[0].name }}</p>
+
+                <p class="card-text texto_generos">{{ "Total de canciones:" + albunes.total_tracks }}</p>
+
+                <a target="_blank" [href]="albunes.external_urls.spotify" class="boton_ver_album">  Visitar Album</a>
+                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
