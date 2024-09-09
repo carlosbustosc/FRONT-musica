@@ -114,3 +114,16 @@
 
     
 }
+
+@media(max-width:365px){
+
+    .card-title{
+        color: #ffffff;
+        font-size: 14px;
+        margin-bottom: 0px;
+    }
+
+    .texto_generos{
+        font-size: 14px;
+    }
+}

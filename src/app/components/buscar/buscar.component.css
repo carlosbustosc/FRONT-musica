@@ -111,6 +111,7 @@
 
     .contenedor_principal_buscar {
         padding: 0px 30px;
+        background-size: cover;
     }
 
     .col-md-3{
@@ -122,13 +123,25 @@
 
     .card-title{
         color: #ffffff;
-        font-size: 25px;
+        font-size: 22px;
     }
 
     .card-body {
         padding: 17px 0px;
     }
     
+}
 
+
+
+@media(max-width:365px){
+
+    .card-text.texto_generos.fondo_verde {
+        font-size: 15px;
+    }
+
+    .card-text.texto_generos {
+        font-size: 14px;
+    }
 
 }
