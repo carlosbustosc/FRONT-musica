@@ -100,3 +100,35 @@
     width: 100%;
     margin:30px auto 0px auto;
 }
+
+@media(max-width:650px){
+
+ 
+
+    .letra_artista {
+        font-size: 17px;
+    }
+
+    .contenedor_principal_buscar {
+        padding: 0px 30px;
+    }
+
+    .col-md-3{
+        flex: 0 0 auto;
+        width: 85%;
+        padding: 10px 13px;
+        margin: 10px auto;
+    }
+
+    .card-title{
+        color: #ffffff;
+        font-size: 25px;
+    }
+
+    .card-body {
+        padding: 17px 0px;
+    }
+    
+
+
+}

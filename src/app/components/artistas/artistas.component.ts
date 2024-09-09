@@ -93,7 +93,29 @@ getAcanciones( id:string ){
   }
 
   getID( id:string ){
-      
+    
+
+    //contenedor mobile
+    const mediaQuery = window.matchMedia('(max-width: 600px)');
+    
+    if(mediaQuery.matches){
+
+    //animar cajon 
+    const cajonAlbunes:any = document.querySelector('.cortar_contenedor');
+    cajonAlbunes.animate([
+          { left: '0px' },
+          { left: '-100%' }
+      ], {
+          duration: 1000, // Duración en milisegundos (1 segundo)
+          fill: 'forwards' // Mantener el estado final de la animación
+      });
+
+    }
+
+
+
+   
+
     this.getArtista( id );
     this.getAcanciones( id );
   }

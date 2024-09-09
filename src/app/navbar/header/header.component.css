@@ -16,3 +16,23 @@
     right: 0;
     top: 10px;
 }
+
+@media(max-width:650px){
+
+    .menu_header{
+        background-color: #010522cc !important;
+        padding: 12px 10px;
+        position: fixed;
+        width: 100%;
+        z-index: 10;
+    }
+
+    .icono_menu{
+        width: 78px;
+    }
+
+
+    .navbar-toggler-icon {
+        background-color: #ede3e3;
+    }
+}

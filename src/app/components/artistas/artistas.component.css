@@ -232,3 +232,93 @@ iframe {
     background-color: #7d69fd;
     color: #000;
 }
+
+@media(max-width:650px){
+
+    .menu_header{
+        background-color: #010522cc !important;
+        padding: 22px 10px;
+        position: fixed;
+        width: 100%;
+    }
+
+ 
+
+       .contenedor_principal_artista {
+        margin: 108px auto 0px auto;
+        width: 100%;
+    }
+
+    .container_fluid.cortar_contenedor {
+        width: 100%;
+        margin-top: 83px;
+    }
+
+    .col-md-6 {
+        text-align: center;
+    }
+
+    .artista_name {
+        font-size: 28px;
+        line-height: 76px;
+        text-align: center;
+        margin-bottom: 0px;
+    }
+
+    .card.col-md-2 {
+        margin: 0px 6px;
+    }
+
+    .seguidores {
+        font-size: 14px;
+        margin-top: 0px;
+    }
+
+    .generos.badge.rounded-pill.text-bg-primary {
+        padding: 5px 30px 6px 30px !important;
+        font-size: 15px !important;
+        margin: 0px auto 19px auto;
+    }
+
+    .card-text {
+        font-size: 16px ;
+        line-height: 24px ;
+    }
+
+    .card-img-overlay {
+        height: 166px;
+    }
+
+    .tarjeta_artista {
+        margin-top: 30px;
+        height: 166px;
+    }
+
+    .card-img {
+        width: 100%;
+        height: 166px;
+    }
+
+    .boton_volver {
+        font-size: 14px !important;
+    }
+
+   
+}
+
+
+@media(max-width:365px){
+
+    .card-text {
+        font-size: 15px;
+        line-height: 20px;
+    }
+
+    .card-text2{
+      
+        font-size: 14px;
+        line-height: 22px;
+    }
+    
+
+}

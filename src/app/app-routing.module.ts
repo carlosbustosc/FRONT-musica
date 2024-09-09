@@ -21,7 +21,6 @@ const routes: Routes = [
   { path:"artistas/:id", component: ArtistasComponent  }, // canActivate: [ AuthGuard ]
   { path:"buscar",       component:BuscarComponent },     // canActivate: [ AuthGuard ]
   { path:"**", pathMatch:"full", redirectTo:"albunes" }
-
 ];
 
 
