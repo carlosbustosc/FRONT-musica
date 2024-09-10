@@ -99,6 +99,7 @@ getAcanciones( id:string ){
     const mediaQuery = window.matchMedia('(max-width: 600px)');
     
     if(mediaQuery.matches){
+    
 
     //animar cajon 
     const cajonAlbunes:any = document.querySelector('.cortar_contenedor');

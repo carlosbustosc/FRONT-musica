@@ -10,6 +10,7 @@ describe('ArtistasComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [ ArtistasComponent ]
     })
+    
     .compileComponents();
 
     fixture = TestBed.createComponent(ArtistasComponent);

@@ -252,7 +252,9 @@ iframe {
     .container_fluid.cortar_contenedor {
         width: 100%;
         margin-top: 83px;
+        display: none;
     }
+    
 
     .col-md-6 {
         text-align: center;
